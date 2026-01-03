@@ -1,0 +1,26 @@
+body {
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  margin: 0;
+  background-color: #f9fafb;
+  color: #111827;
+}
+
+nav {
+  background: white;
+  padding: 16px;
+  display: flex;
+  gap: 16px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+nav a {
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 500;
+}
+
+main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
