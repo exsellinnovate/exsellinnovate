@@ -1,26 +1,138 @@
-body {
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+/* Reset and base */
+* {
+  box-sizing: border-box;
   margin: 0;
-  background-color: #f9fafb;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  background: #f9fafb;
   color: #111827;
 }
 
+/* Navigation */
 nav {
-  background: white;
-  padding: 16px;
   display: flex;
-  gap: 16px;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: white;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
-nav a {
-  text-decoration: none;
+nav .logo {
+  font-weight: 600;
+  font-size: 1.5rem;
   color: #2563eb;
-  font-weight: 500;
 }
 
-main {
-  max-width: 900px;
-  margin: 40px auto;
-  padding: 0 16px;
+nav .nav-links a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #111827;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+nav .nav-links a:hover {
+  color: #2563eb;
+}
+
+/* Hero Section */
+header#hero {
+  text-align: center;
+  padding: 100px 20px;
+  background: linear-gradient(to right, #2563eb, #3b82f6);
+  color: white;
+}
+
+header#hero h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+header#hero p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+header#hero .btn {
+  padding: 12px 24px;
+  background-color: white;
+  color: #2563eb;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: 6px;
+  transition: 0.3s;
+}
+
+header#hero .btn:hover {
+  background-color: #e0e7ff;
+}
+
+/* Sections */
+section {
+  max-width: 1000px;
+  margin: 80px auto;
+  padding: 0 20px;
+}
+
+section h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: 2rem;
+  color: #2563eb;
+}
+
+/* Cards */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  border-radius: 10px;
+  padding: 20px;
+  width: 300px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 30px;
+  background: #111827;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  nav {
+    flex-direction: column;
+  }
+
+  nav .nav-links {
+    margin-top: 10px;
+  }
 }
